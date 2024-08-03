@@ -3,7 +3,6 @@ import HeaderPage from "./components/HeaderPage";
 import QuestionsPage from "./components/QuestionsPage";
 import SolutionsPage from "./components/SolutionsPage";
 import { decode } from "html-entities";
-import Confetti from "react-confetti";
 
 function App () {
   const [startGame, setStartGame] = useState(false);
@@ -112,7 +111,6 @@ function App () {
         checkAnswer={checkAnswer}
       />
       }
-      {isChecked && <Confetti width={1132} />}
       {isChecked && 
       <>
         <SolutionsPage data={data} restart={playAgain} score={score} />
